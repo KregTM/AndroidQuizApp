@@ -6,4 +6,5 @@
     <string name="next_button_text">Понял, принял.</string>
     <string name="user_name_debug_value">про123</string>
     <string name="user_name_place_holder">Обрисуй погоняло своё.</string>
+    <string name="answer_button_label">Жми сюда, если уверен.</string>
 </resources>
