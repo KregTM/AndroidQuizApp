@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="welcome_text">Часик в радость, арестанты.</string>
+    <string name="welcome_user">Располагайся на своей шконке, %1$s.</string>
+    <string name="welcome_user_debug">Располагайся на своей шконке, про123.</string>
+    <string name="next_button_text">Понял, принял.</string>
+    <string name="user_name_debug_value">про123</string>
+    <string name="user_name_place_holder">Обрисуй погоняло своё.</string>
+</resources>
