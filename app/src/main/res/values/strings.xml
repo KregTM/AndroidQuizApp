@@ -7,4 +7,6 @@
     <string name="user_name_debug_value">про123</string>
     <string name="user_name_place_holder">Обрисуй погоняло своё.</string>
     <string name="answer_button_label">Жми сюда, если уверен.</string>
+    <string name="result_text">Ты по жизни будешь: %1$d </string>
+    <string name="restart_button">Давай по новой, Миша, всё х..</string>
 </resources>

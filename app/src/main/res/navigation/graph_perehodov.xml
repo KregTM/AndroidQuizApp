@@ -15,5 +15,13 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.kreg.quizapp.mainFeature.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.kreg.quizapp.result.ResultFragment"
+        android:label="ResultFragment" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.kreg.quizapp.mainFeature
+package com.kreg.quizapp.result
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,27 +14,27 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainFragment: Fragment() {
+class ResultFragment: Fragment() {
+
     @Inject
-    lateinit var manager: DataManager
+    lateinit var storage: DataManager
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return  inflater.inflate(R.layout.fragment_result, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val welcomeLabel = view.findViewById<TextView>(R.id.welcome_text)
-        welcomeLabel.text = getString(R.string.welcome_user, manager.userName)
-
-        val buttonAnswer = view.findViewById<Button>(R.id.answer_button)
-        buttonAnswer.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_resultFragment)
+        val testResult = view.findViewById<TextView>(R.id.score_text)
+        testResult.text = getString(R.string.result_text, storage.test.score)
+        val buttonRestart = view.findViewById<Button>(R.id.restart_button)
+        buttonRestart.setOnClickListener {
+            storage.test.score = 0
+            findNavController().popBackStack(R.id.loginFragment, false)
         }
-
     }
 }
